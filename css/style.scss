@@ -119,6 +119,10 @@ html{
   gap: 3rem;
   transition: left 0.5s ease;
   
+  &.active{
+    left:0
+  }
+  
   #close-navbar{
     position: absolute;
     height: 3rem;

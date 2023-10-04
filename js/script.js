@@ -1,35 +1,25 @@
 let menuBtn = document.querySelector('#menu-btn');
 let closeBtn = document.querySelector('#close-navbar');
+let navbar = document.querySelector('.navbar');
 
-let sideMenu = document.querySelector('.navbar');
 
-
-// menuBtn.onclick = function() { 
-//         if (sideMenu.style.left < 0 ) {
-//             sideMenu.style.left = 0;}
-// }
-
-menuBtn.onclick = function() { 
-    let computedStyle = window.getComputedStyle(sideMenu);
-    let leftValue = parseFloat(computedStyle.left);
-
-    if (leftValue < 0) {
-        sideMenu.style.left = '0';
-    } else if (leftValue == 0) {
-        sideMenu.style.left = '-110%';
-    }
-};
-
+menuBtn.onclick = () => {
+    navbar.classList.toggle('active')
+}
 
 // menuBtn.onclick = function() { 
-//     let computedStyle = window.getComputedStyle(sideMenu);
-//     if (computedStyle.display === "flex") {
-//         sideMenu.style.display = "none";
-//     } else if (computedStyle.display === "none") {
-//         sideMenu.style.display = "flex";
+//     let computedStyle = window.getComputedStyle(navbar);
+//     let leftValue = parseFloat(computedStyle.left);
+
+//     if (leftValue < 0) {
+//         navbar.style.left = '0';
+//     } else if (leftValue == 0) {
+//         navbar.style.left = '-110%';
 //     }
 // };
 
 closeBtn.onclick = function() {  
-    sideMenu.style.left = '-110%';
+    navbar.classList.remove('active')
 };
+
+22:07
