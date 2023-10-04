@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s lnear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #e84393;
+}
+
+.header {
+  padding: 1.5rem 9rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.header .logo img {
+  height: 4rem;
+}
+.header .search-form {
+  height: 5rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.header input {
+  width: 100%;
+  background: none;
+  font-size: 1.6rem;
+  color: #777;
+  text-transform: none;
+}
+.header label {
+  font-size: 2rem;
+  margin-left: 0.7rem;
+  color: #222;
+  cursor: pointer;
+}
+.header label:hover {
+  color: #e84393;
+}
+.header .icons a,
+.header .icons div {
+  font-size: 1.7rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  margin-left: 0.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  background: #f5f5f5;
+  color: black;
+  cursor: pointer;
+}
+.header .icons a:hover,
+.header .icons div:hover {
+  background: #e84393;
+  color: #fff;
+}
+.header #search-btn {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  z-index: 1001;
+  height: 100%;
+  min-width: 250px;
+  width: 20%;
+  background: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  transition: left 0.5s ease;
+}
+.navbar #close-navbar {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  padding-top: 4px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.navbar #close-navbar:hover {
+  color: #e84393;
+  border: 2px solid #e84393;
+}
+.navbar a {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  transition: letter-spacing 0.5s ease;
+}
+.navbar a:hover {
+  color: #e84393;
+  letter-spacing: 0.2rem;
+}
