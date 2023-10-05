@@ -27,8 +27,18 @@ html::-webkit-scrollbar-thumb {
   background: #e84393;
 }
 
+section {
+  padding: 5rem 9%;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0%;
+  }
+}
 .header {
-  padding: 1.5rem 9rem;
+  padding: 1.5rem 4rem;
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   display: flex;
@@ -45,7 +55,7 @@ html::-webkit-scrollbar-thumb {
 }
 .header .search-form {
   height: 5rem;
-  width: 50rem;
+  width: 40rem;
   border-radius: 0.5rem;
   background: #f5f5f5;
   display: flex;
@@ -67,6 +77,9 @@ html::-webkit-scrollbar-thumb {
 }
 .header label:hover {
   color: #e84393;
+}
+.header .icons {
+  display: inline-table;
 }
 .header .icons a,
 .header .icons div {
@@ -93,7 +106,7 @@ html::-webkit-scrollbar-thumb {
 .navbar {
   position: fixed;
   top: 0;
-  left: -110%;
+  left: -100%;
   z-index: 1001;
   height: 100%;
   min-width: 250px;
@@ -138,4 +151,75 @@ html::-webkit-scrollbar-thumb {
 .navbar a:hover {
   color: #e84393;
   letter-spacing: 0.2rem;
+}
+
+.home {
+  padding: 0;
+}
+.home .slide {
+  display: none;
+  min-height: calc(100vh - 7rem);
+}
+.home .slide.active {
+  display: flex;
+}
+.home .slide .content {
+  display: flex;
+  width: 50%;
+  padding: 2rem 7%;
+  justify-content: center;
+  flex-flow: column;
+  align-items: flex-start;
+  background: #fce9f2;
+}
+.home .slide .content img {
+  height: 25rem;
+  width: 25rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.2s linear backwards;
+}
+.home .slide .image {
+  width: 50%;
+  height: 100%;
+}
+.home .slide .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 840px) {
+  html {
+    background: #ffeded;
+    font-size: 55%;
+  }
+  .header {
+    padding: 1rem 3rem;
+  }
+  .header .search-form {
+    width: 30rem;
+  }
+}
+@media (max-width: 640px) {
+  .header #search-btn {
+    display: inline-block;
+  }
+  .header .search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    border-top: 0.2rem solid #222;
+    border-bottom: 0.2rem solid #222;
+    width: 100%;
+    background: #fff;
+    height: 6rem;
+    display: none;
+    animation: fadeUp 0.2s linear backwards;
+  }
+  .header .search-form.active {
+    display: flex;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
 }
