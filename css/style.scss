@@ -49,6 +49,21 @@ section {
   padding: 5rem 9%;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border: $border;
+  background: $white;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: $black;
+
+  &:hover{
+    color: $white;
+    background: $pink;
+  }
+}
 
 @keyframes fadeUp {
   0% {
@@ -195,7 +210,7 @@ section {
 
   .slide {
     display: none;
-    min-height: calc(100vh - 7rem);
+    height: calc(100vh - 7rem);
 
     &.active {
       display: flex;
@@ -210,12 +225,33 @@ section {
       flex-flow: column;
       align-items: flex-start;
       background: #fce9f2;
+      position: relative;
 
       img {
         height: 25rem;
         width: 25rem;
         margin-bottom: 2rem;
         animation: fadeUp .2s linear backwards;
+        display: none;
+      }
+
+      span {
+        color: $pink;
+        display: block;
+        font-size: 2.5rem;
+        border-bottom: .5rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        animation: fadeUp .2s linear  backwards .4s;
+      }
+      h3 {
+        color: $black;
+        font-size: 5.5rem;
+        text-transform: uppercase;
+        animation: fadeUp .2s linear  backwards .6s;
+      }
+      .btn{
+        animation: fadeUp .2s linear  backwards .8s;
       }
     }
 
