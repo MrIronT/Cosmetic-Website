@@ -65,6 +65,24 @@ section {
   }
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h1{
+    font-size: 3.5rem;
+    color: $black;
+  }
+
+  p{
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    color: $light-color;
+    max-width: 50rem;
+    line-height: 2;
+  }
+}
+
 @keyframes fadeUp {
   0% {
     transform: translateY(4rem);
@@ -250,8 +268,33 @@ section {
         text-transform: uppercase;
         animation: fadeUp .2s linear  backwards .6s;
       }
-      .btn{
+      .btn {
         animation: fadeUp .2s linear  backwards .8s;
+      }
+      .controls {
+        position: absolute;
+        bottom: 8%; right: -7rem;
+            
+          div{
+            height: 5rem;
+            width: 5rem;
+            text-align: center;
+            font-size: 3rem;
+            line-height: 5rem;
+            margin-right: 1.2rem;
+            background: $white;
+            color: $black;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover{
+              background: $pink;
+              color: $white;
+              transform: scale(1.1);
+          }
+
+        }
+
       }
     }
 
@@ -269,10 +312,179 @@ section {
 }
 
 
+.category{
+  @include grid(16rem);
+
+  .box{
+    padding: 2rem;
+    border-radius: 1rem;
+    background: $light-bg;
+    text-align: center;
+    transition: all .3s ease;
+
+    &:hover{
+
+      transform: scale(1.05);
+      background: $pink;
+
+      img{
+        filter: invert(1);
+      }
+      p{
+        color: $white;
+      }
+    }
+
+    img{
+      height: 10rem;
+      margin-bottom: 1rem;
+    }
+
+    p{
+      font-size: 1.7rem;
+      color: $black;
+    }
+  }
+}
+
+.about {
+  background: url(../images/about-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+
+  .content{
+    width: 55rem;
+    background: $white;
+    padding: 3rem;
+
+    span{
+      color: $pink;
+      font-size: 2rem;
+    }
+
+    h3{
+      padding-top: 1rem;
+      font-size: 3rem;
+      color: $black;
+    }
+
+    p{
+      font-size: 1.5rem;
+      color: $light-color;
+      line-height: 2;
+      padding: 1rem 0;
+    }
+  }
+}
 
 
+.shop {
 
+  .slide{
+    width: 35rem;
+    background: $white;
+    
+    &:hover .image{
+      img{
+        transform: scale(1.1);
+      }
 
+      .icons {
+        right: 1rem;
+      }
+    } 
+
+    .image{
+      height: 30rem;
+      width: 80%;
+      position: relative;
+      overflow: hidden;
+
+      .discount{
+        position: absolute;
+        top: 1rem; left: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        color: $white;
+        background-color: $pink;
+        z-index: 10;
+      }
+
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all .2s ease;
+      }
+
+      .icons{
+        position: absolute;
+        bottom: 1rem; right: -8rem;
+        text-align: center;
+        transition: all .2s ease;
+
+        a{
+          height: 4rem;
+          width: 4rem;
+          margin-bottom: 1rem;
+          line-height: 4rem;
+          font-size: 1.5rem;
+          background: $white;
+          color: $black;
+          border: $black;
+          border-radius: .5rem;
+          box-shadow: $box-shadow;
+          display: block;
+          transition: all 0.2s ease;
+
+          &:hover{
+            background: $pink;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .content{
+      padding: 2rem;
+
+      .stars{
+        padding-bottom: 0.5rem;
+      }
+      i{
+        font-size: 1.5rem;
+        color: $light-color;
+      }
+    }
+
+    p{
+      font-size: 2rem;
+      color: $black;
+      line-height: 2;
+    }
+    
+    .price{
+      font-size: 2rem;
+      color: $pink;
+
+      span{
+        font-size: 1.5rem;
+        color: $light-color;
+        text-decoration: line-through;
+      }
+    }
+  }
+  
+
+  .swiper .swiper-pagination{
+    
+    
+    }
+  
+}
 
 
 
@@ -303,6 +515,18 @@ section {
   .header .search-form {
     width: 30rem;
   }
+  .home .slide {
+    .content{
+      padding: 2rem;
+
+      span{
+        font-size: 2rem;
+      }
+      h3{
+        font-size: 4rem;
+      }
+    }
+  }
 }
 
 @media (max-width:640px) {
@@ -332,5 +556,30 @@ section {
 
   section {
     padding: 3rem 2rem;
+  }
+
+  .home .slide {
+    position: relative;
+    height: calc(100vh - 6rem);
+
+    .content {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.7);
+
+      img {
+        display: inline-block;
+      }
+      .controls {
+        position: static;
+        margin-top: 10rem;
+      }
+    }
+    .image {
+      width: 100%;
+    }
   }
 }

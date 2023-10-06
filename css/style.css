@@ -46,6 +46,22 @@ section {
   background: #e84393;
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.heading h1 {
+  font-size: 3.5rem;
+  color: #222;
+}
+.heading p {
+  margin: 1rem auto;
+  font-size: 1.5rem;
+  color: #777;
+  max-width: 50rem;
+  line-height: 2;
+}
+
 @keyframes fadeUp {
   0% {
     transform: translateY(4rem);
@@ -213,6 +229,28 @@ section {
 .home .slide .content .btn {
   animation: fadeUp 0.2s linear backwards 0.8s;
 }
+.home .slide .content .controls {
+  position: absolute;
+  bottom: 8%;
+  right: -7rem;
+}
+.home .slide .content .controls div {
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 5rem;
+  margin-right: 1.2rem;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.home .slide .content .controls div:hover {
+  background: #e84393;
+  color: #fff;
+  transform: scale(1.1);
+}
 .home .slide .image {
   width: 50%;
   height: 100%;
@@ -223,6 +261,147 @@ section {
   object-fit: cover;
 }
 
+.category {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+.category .box {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #f5f5f5;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.category .box:hover {
+  transform: scale(1.05);
+  background: #e84393;
+}
+.category .box:hover img {
+  filter: invert(1);
+}
+.category .box:hover p {
+  color: #fff;
+}
+.category .box img {
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+.category .box p {
+  font-size: 1.7rem;
+  color: #222;
+}
+
+.about {
+  background: url(../images/about-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+.about .content {
+  width: 55rem;
+  background: #fff;
+  padding: 3rem;
+}
+.about .content span {
+  color: #e84393;
+  font-size: 2rem;
+}
+.about .content h3 {
+  padding-top: 1rem;
+  font-size: 3rem;
+  color: #222;
+}
+.about .content p {
+  font-size: 1.5rem;
+  color: #777;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.shop .slide {
+  width: 35rem;
+  background: #fff;
+}
+.shop .slide:hover .image img {
+  transform: scale(1.1);
+}
+.shop .slide:hover .image .icons {
+  right: 1rem;
+}
+.shop .slide .image {
+  height: 30rem;
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+.shop .slide .image .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #e84393;
+  z-index: 10;
+}
+.shop .slide .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+.shop .slide .image .icons {
+  position: absolute;
+  bottom: 1rem;
+  right: -8rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.shop .slide .image .icons a {
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 1rem;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  background: #fff;
+  color: #222;
+  border: #222;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: block;
+  transition: all 0.2s ease;
+}
+.shop .slide .image .icons a:hover {
+  background: #e84393;
+  color: #fff;
+}
+.shop .slide .content {
+  padding: 2rem;
+}
+.shop .slide .content .stars {
+  padding-bottom: 0.5rem;
+}
+.shop .slide .content i {
+  font-size: 1.5rem;
+  color: #777;
+}
+.shop .slide p {
+  font-size: 2rem;
+  color: #222;
+  line-height: 2;
+}
+.shop .slide .price {
+  font-size: 2rem;
+  color: #e84393;
+}
+.shop .slide .price span {
+  font-size: 1.5rem;
+  color: #777;
+  text-decoration: line-through;
+}
 @media (max-width: 840px) {
   html {
     background: #ffeded;
@@ -233,6 +412,15 @@ section {
   }
   .header .search-form {
     width: 30rem;
+  }
+  .home .slide .content {
+    padding: 2rem;
+  }
+  .home .slide .content span {
+    font-size: 2rem;
+  }
+  .home .slide .content h3 {
+    font-size: 4rem;
   }
 }
 @media (max-width: 640px) {
@@ -256,5 +444,28 @@ section {
   }
   section {
     padding: 3rem 2rem;
+  }
+  .home .slide {
+    position: relative;
+    height: calc(100vh - 6rem);
+  }
+  .home .slide .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .home .slide .content img {
+    display: inline-block;
+  }
+  .home .slide .content .controls {
+    position: static;
+    margin-top: 10rem;
+  }
+  .home .slide .image {
+    width: 100%;
   }
 }
