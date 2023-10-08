@@ -504,7 +504,7 @@ section {
 
 @media (max-width:840px) {
   html {
-    background: #ffeded;
+    background: #fff;
     font-size: 55%;
   }
 
@@ -580,6 +580,32 @@ section {
     }
     .image {
       width: 100%;
+    }
+  }
+}
+
+.gallery {
+  background: $light-bg;
+
+  .lightbox{
+    @include grid(31rem);
+    
+    a {
+      height:30rem;
+      overflow: hidden;
+      border: 1rem solid $white;
+      box-shadow: $box-shadow;
+      
+      &:hover img {
+        transform: scale(1.05);
+      }
+
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all .2s ease;
+      }
     }
   }
 }

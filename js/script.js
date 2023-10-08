@@ -41,12 +41,30 @@ function prev(){
 
 var swiper = new Swiper(".products-slider", {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 40,
     centeredSlides: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+        340: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
   });
 
  
