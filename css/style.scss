@@ -479,21 +479,6 @@ section {
   }
   
 
-  .swiper .swiper-pagination{
-    
-    
-    }
-  
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -588,7 +573,7 @@ section {
   background: $light-bg;
 
   .lightbox{
-    @include grid(31rem);
+    @include grid(35rem);
     
     a {
       height:30rem;
