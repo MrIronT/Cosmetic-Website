@@ -476,9 +476,8 @@ section {
         text-decoration: line-through;
       }
     }
-  }
-  
-
+  } 
+}
 
 
 
@@ -573,7 +572,7 @@ section {
   background: $light-bg;
 
   .lightbox{
-    @include grid(35rem);
+    @include grid(38rem);
     
     a {
       height:30rem;

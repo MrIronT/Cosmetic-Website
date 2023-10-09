@@ -402,6 +402,7 @@ section {
   color: #777;
   text-decoration: line-through;
 }
+
 @media (max-width: 840px) {
   html {
     background: #fff;
@@ -474,7 +475,7 @@ section {
 }
 .gallery .lightbox {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
   gap: 2rem;
 }
 .gallery .lightbox a {
