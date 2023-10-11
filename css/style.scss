@@ -480,7 +480,136 @@ section {
 }
 
 
+.team {
+  background: linear-gradient($light-bg, $white);
 
+  .box-container{
+    @include grid(35rem);
+
+    .box{
+      position: relative;
+    }
+    .image{
+      height: 40rem;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+        &:hover .share{
+          right: 0;
+        }
+
+        &:hover img{
+          transform: scale(1.05);
+        }
+
+        img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: all .2s ease;
+        }
+        .share{
+          position: absolute;
+          background: $black;
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          overflow: hidden;
+          top: 0; right: -5rem;
+          transition: all .2s ease;
+        
+          a{
+            height: 5rem;
+            width: 5rem;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+            line-height: 5rem;
+            font-size: 3rem;
+            color: $white;
+            cursor: pointer;
+
+            &:hover{
+              color: $pink;
+            }
+          }
+        }
+    }
+    .content{
+      text-align: center;
+      padding: 1rem;
+      bottom: 0;
+      width: 100%;
+
+      h3{
+        font-size: 2rem;
+        font-weight: 300;
+        color: $black;
+      }
+      p{
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: $pink;
+      }
+    }
+  }
+}
+
+
+.arrivals {
+   
+  .slide {
+    background: $white;
+    text-align: center;
+    margin-bottom: 3rem;
+    
+
+    &:hover img{
+      transform: scale(1.05);
+    }
+
+    .image{
+      height: 40rem;
+      width: 100%;
+      overflow: hidden;      
+
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all .2s ease;
+        
+      }
+    }
+    .content{
+      padding: 2rem;
+
+      p{
+        font-size:2rem;
+        color: $black;
+        line-height: 2rem;
+        padding-bottom: .5rem;
+      }
+
+      .price{
+        font-size: 2rem;
+        color: $pink;
+        
+
+        span{
+          color: $light-color;
+          font-size: 1.5rem;
+          text-decoration: line-through;
+        }
+      }
+      .btn{
+        transition: all .2s ease;
+       }
+    }
+  }
+}
 
 
 
@@ -594,80 +723,3 @@ section {
   }
 }
 
-
-.team {
-  background: linear-gradient($light-bg, $white);
-
-  .box-container{
-    @include grid(35rem);
-
-    .box{
-      position: relative;
-    }
-    .image{
-      height: 40rem;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-
-        &:hover .share{
-          right: 0;
-        }
-
-        &:hover img{
-          transform: scale(1.05);
-        }
-
-        img{
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          transition: all .2s ease;
-        }
-        .share{
-          position: absolute;
-          background: $black;
-          height: 100%;
-          display: flex;
-          flex-flow: column;
-          justify-content: center;
-          overflow: hidden;
-          top: 0; right: -5rem;
-          transition: all .2s ease;
-        
-          a{
-            height: 5rem;
-            width: 5rem;
-            margin-bottom: 1rem;
-            display: block;
-            text-align: center;
-            line-height: 5rem;
-            font-size: 3rem;
-            color: $white;
-            cursor: pointer;
-
-            &:hover{
-              color: $pink;
-            }
-          }
-        }
-    }
-    .content{
-      text-align: center;
-      padding: 1rem;
-      bottom: 0;
-      width: 100%;
-
-      h3{
-        font-size: 2rem;
-        font-weight: 300;
-        color: $black;
-      }
-      p{
-        font-size: 1.5rem;
-        font-weight: 200;
-        color: $pink;
-      }
-    }
-  }
-}

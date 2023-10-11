@@ -67,6 +67,34 @@ var swiper = new Swiper(".products-slider", {
       },
   });
 
+  var swiper = new Swiper(".arrivals-slider", {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    centeredSlides: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        340: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+  });
+
  
 // menuBtn.onclick = function() { 
 //     let computedStyle = window.getComputedStyle(navbar);

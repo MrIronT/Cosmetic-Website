@@ -403,6 +403,119 @@ section {
   text-decoration: line-through;
 }
 
+.team {
+  background: linear-gradient(#f5f5f5, #fff);
+}
+.team .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 2rem;
+}
+.team .box-container .box {
+  position: relative;
+}
+.team .box-container .image {
+  height: 40rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.team .box-container .image:hover .share {
+  right: 0;
+}
+.team .box-container .image:hover img {
+  transform: scale(1.05);
+}
+.team .box-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+.team .box-container .image .share {
+  position: absolute;
+  background: #222;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  overflow: hidden;
+  top: 0;
+  right: -5rem;
+  transition: all 0.2s ease;
+}
+.team .box-container .image .share a {
+  height: 5rem;
+  width: 5rem;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+.team .box-container .image .share a:hover {
+  color: #e84393;
+}
+.team .box-container .content {
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+}
+.team .box-container .content h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #222;
+}
+.team .box-container .content p {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #e84393;
+}
+
+.arrivals .slide {
+  background: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.arrivals .slide:hover img {
+  transform: scale(1.05);
+}
+.arrivals .slide .image {
+  height: 40rem;
+  width: 100%;
+  overflow: hidden;
+}
+.arrivals .slide .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+.arrivals .slide .content {
+  padding: 2rem;
+}
+.arrivals .slide .content p {
+  font-size: 2rem;
+  color: #222;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+}
+.arrivals .slide .content .price {
+  font-size: 2rem;
+  color: #e84393;
+}
+.arrivals .slide .content .price span {
+  color: #777;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+.arrivals .slide .content .btn {
+  transition: all 0.2s ease;
+}
+
 @media (max-width: 840px) {
   html {
     background: #fff;
@@ -492,76 +605,4 @@ section {
   width: 100%;
   object-fit: cover;
   transition: all 0.2s ease;
-}
-
-.team {
-  background: linear-gradient(#f5f5f5, #fff);
-}
-.team .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  gap: 2rem;
-}
-.team .box-container .box {
-  position: relative;
-}
-.team .box-container .image {
-  height: 40rem;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.team .box-container .image:hover .share {
-  right: 0;
-}
-.team .box-container .image:hover img {
-  transform: scale(1.05);
-}
-.team .box-container .image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: all 0.2s ease;
-}
-.team .box-container .image .share {
-  position: absolute;
-  background: #222;
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  overflow: hidden;
-  top: 0;
-  right: -5rem;
-  transition: all 0.2s ease;
-}
-.team .box-container .image .share a {
-  height: 5rem;
-  width: 5rem;
-  margin-bottom: 1rem;
-  display: block;
-  text-align: center;
-  line-height: 5rem;
-  font-size: 3rem;
-  color: #fff;
-  cursor: pointer;
-}
-.team .box-container .image .share a:hover {
-  color: #e84393;
-}
-.team .box-container .content {
-  text-align: center;
-  padding: 1rem;
-  bottom: 0;
-  width: 100%;
-}
-.team .box-container .content h3 {
-  font-size: 2rem;
-  font-weight: 300;
-  color: #222;
-}
-.team .box-container .content p {
-  font-size: 1.5rem;
-  font-weight: 200;
-  color: #e84393;
 }
