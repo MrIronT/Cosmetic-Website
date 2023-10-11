@@ -95,7 +95,62 @@ var swiper = new Swiper(".products-slider", {
       },
   });
 
+  var swiper = new Swiper(".reviews-slider", {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    centeredSlides: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        340: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+  });
  
+
+  var swiper = new Swiper(".blogs-slider", {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    centeredSlides: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        340: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+  });
 // menuBtn.onclick = function() { 
 //     let computedStyle = window.getComputedStyle(navbar);
 //     let leftValue = parseFloat(computedStyle.left);

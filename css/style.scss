@@ -611,6 +611,157 @@ section {
   }
 }
 
+.reviews-slider {
+
+  .slide {
+    width: 35rem;
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      
+      img {
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $black;
+      }
+
+      .stars i{
+        font-size: 1.5rem;
+        color: $pink;
+      }
+    }
+
+    .text{
+      padding: 2rem;
+      background: $light-bg;
+      border-radius: .5rem;
+      line-height: 2;
+      font-size: 1.5rem;
+      position: relative;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: -1rem; left: 3rem;
+        height: 2rem;
+        width: 2rem;
+        background: $light-bg;
+        transform: rotate(45deg);
+        
+      }
+    }
+  }
+}
+
+.service {
+  background: $light-bg;
+  @include grid(30rem);
+
+  .box{
+    border: $border;
+    padding: 2rem;
+    text-align: center;
+    background: $white;
+
+    &:hover{
+      background: $black;
+      img{
+        filter: invert(1);
+      }
+      h3{
+        color: $white;
+      }
+      p{
+        color: $white;
+      }
+    }
+  }
+
+  img{
+    height: 8rem;
+    margin-bottom: .5rem;
+  }
+
+  h3{
+    padding: .7rem 0;
+    font-size: $light-color;
+    line-height: 2;
+  }
+}
+
+
+.blogs{
+
+  .slide{
+
+    .image{
+      height: 33rem;
+      width: 100%;
+      overflow: hidden;
+      position: relative; 
+
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    
+      .icons{
+        background: $white;
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+        border: $border;
+        z-index: 10;
+        
+        a{
+          font-size: 1.5rem;
+          color: $black;
+
+          i{
+            color: $pink;
+            padding-right: .5rem;
+          }
+          &:hover{
+            color: $pink;
+          }
+        }
+      }
+    }
+    .content{
+      text-align: center;
+      padding-top: 1rem;
+
+      h3{
+        font-size: 2rem;
+        color: $black;
+      }
+
+      p{
+        padding: 1rem 0;
+        line-height: 2;
+        color: $light-color;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+
+
+
 
 
 //  media queries
