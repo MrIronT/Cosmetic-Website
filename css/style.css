@@ -40,6 +40,7 @@ section {
   font-size: 1.7rem;
   cursor: pointer;
   color: #222;
+  transition: all 0.2s ease;
 }
 .btn:hover {
   color: #fff;
@@ -512,9 +513,6 @@ section {
   font-size: 1.5rem;
   text-decoration: line-through;
 }
-.arrivals .slide .content .btn {
-  transition: all 0.2s ease;
-}
 
 .reviews-slider .slide {
   width: 35rem;
@@ -592,13 +590,23 @@ section {
   line-height: 2;
 }
 
+.blogs .slide {
+  margin-bottom: 3rem;
+}
 .blogs .slide .image {
   height: 33rem;
   width: 100%;
   overflow: hidden;
   position: relative;
+  border: 1px solid #777;
+  border-radius: 1rem;
+}
+.blogs .slide .image:hover img {
+  transform: scale(1.05);
+  transition: all 4s ease;
 }
 .blogs .slide .image img {
+  position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -613,11 +621,10 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
-  border: 0.2rem solid #222;
   z-index: 10;
 }
 .blogs .slide .image .icons a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #222;
 }
 .blogs .slide .image .icons a i {
