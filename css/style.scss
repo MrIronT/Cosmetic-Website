@@ -788,7 +788,101 @@ section {
   }
 }
 
+.footer{
 
+  background: $light-bg;
+
+  .box-container{
+    @include grid(25rem);
+
+    .box{
+      h3{
+        font-size: 2rem;
+        color: $pink;
+        padding: 1rem 0;
+      }
+
+      .link{
+        padding: 1rem 0;
+        display: block;
+        font-size: 1.5rem;
+        color: $light-color;
+
+        i{
+          padding-right: .5rem;
+          color: $pink;
+          transition: all .2s ease;
+        }
+
+        &:hover{
+          color: $pink;
+
+          i{
+            padding-right: 2rem;
+          }
+        }
+      }
+
+      p{
+        font-size: 1.5rem;
+        color: $light-color;
+        padding: 1rem 0;
+
+        i{
+          padding-right: .5rem;
+          color: $pink;
+        }
+      }
+
+      .share{
+        margin-top: 2rem;
+
+        a{
+          width: 5rem;
+          height: 5rem;
+          background-color: $white;
+          border: $border;
+          font-size: 2rem;
+          line-height: 5rem;
+          text-align: center;
+          color: $pink;
+          margin-right: .3rem;
+
+          &:hover{
+            background: $pink;
+            color: $white;
+          }
+        }
+      }
+
+      form{
+        .email{
+          width: 100%;
+          border: $border;
+          padding: 1.2rem 1.4rem;
+          font-size: 1.6rem;
+          color: $light-color;
+          text-transform: none;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+
+  .credits {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding: 1rem;
+    border-top: $border;
+    color: $light-color;
+
+    span{
+      color: $pink;
+    }
+  }
+}
 
 
 
