@@ -60,7 +60,7 @@ section {
   color: $black;
   transition: all .2s ease;
 
-  &:hover{
+  &:hover {
     color: $white;
     background: $pink;
   }
@@ -70,12 +70,12 @@ section {
   text-align: center;
   margin-bottom: 4rem;
 
-  h1{
+  h1 {
     font-size: 3.5rem;
     color: $black;
   }
 
-  p{
+  p {
     margin: 1rem auto;
     font-size: 1.5rem;
     color: $light-color;
@@ -261,37 +261,41 @@ section {
         border-bottom: .5rem;
         letter-spacing: .2rem;
         text-transform: uppercase;
-        animation: fadeUp .2s linear  backwards .4s;
+        animation: fadeUp .2s linear backwards .4s;
       }
+
       h3 {
         color: $black;
         font-size: 5.5rem;
         text-transform: uppercase;
-        animation: fadeUp .2s linear  backwards .6s;
+        animation: fadeUp .2s linear backwards .6s;
       }
+
       .btn {
-        animation: fadeUp .2s linear  backwards .8s;
+        animation: fadeUp .2s linear backwards .8s;
       }
+
       .controls {
         position: absolute;
-        bottom: 8%; right: -7rem;
-            
-          div{
-            height: 5rem;
-            width: 5rem;
-            text-align: center;
-            font-size: 3rem;
-            line-height: 5rem;
-            margin-right: 1.2rem;
-            background: $white;
-            color: $black;
-            cursor: pointer;
-            transition: all 0.2s ease;
+        bottom: 8%;
+        right: -7rem;
 
-            &:hover{
-              background: $pink;
-              color: $white;
-              transform: scale(1.1);
+        div {
+          height: 5rem;
+          width: 5rem;
+          text-align: center;
+          font-size: 3rem;
+          line-height: 5rem;
+          margin-right: 1.2rem;
+          background: $white;
+          color: $black;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background: $pink;
+            color: $white;
+            transform: scale(1.1);
           }
 
         }
@@ -313,35 +317,36 @@ section {
 }
 
 
-.category{
+.category {
   @include grid(16rem);
 
-  .box{
+  .box {
     padding: 2rem;
     border-radius: 1rem;
     background: $light-bg;
     text-align: center;
     transition: all .3s ease;
 
-    &:hover{
+    &:hover {
 
       transform: scale(1.05);
       background: $pink;
 
-      img{
+      img {
         filter: invert(1);
       }
-      p{
+
+      p {
         color: $white;
       }
     }
 
-    img{
+    img {
       height: 10rem;
       margin-bottom: 1rem;
     }
 
-    p{
+    p {
       font-size: 1.7rem;
       color: $black;
     }
@@ -356,23 +361,23 @@ section {
   display: flex;
   align-items: center;
 
-  .content{
+  .content {
     width: 55rem;
     background: $white;
     padding: 3rem;
 
-    span{
+    span {
       color: $pink;
       font-size: 2rem;
     }
 
-    h3{
+    h3 {
       padding-top: 1rem;
       font-size: 3rem;
       color: $black;
     }
 
-    p{
+    p {
       font-size: 1.5rem;
       color: $light-color;
       line-height: 2;
@@ -384,29 +389,30 @@ section {
 
 .shop {
 
-  .slide{
+  .slide {
     width: 35rem;
     background: $white;
-    
-    &:hover .image{
-      img{
+
+    &:hover .image {
+      img {
         transform: scale(1.1);
       }
 
       .icons {
         right: 1rem;
       }
-    } 
+    }
 
-    .image{
+    .image {
       height: 30rem;
       width: 80%;
       position: relative;
       overflow: hidden;
 
-      .discount{
+      .discount {
         position: absolute;
-        top: 1rem; left: 1rem;
+        top: 1rem;
+        left: 1rem;
         padding: 0.5rem 1rem;
         font-size: 1.5rem;
         color: $white;
@@ -414,20 +420,21 @@ section {
         z-index: 10;
       }
 
-      img{
+      img {
         height: 100%;
         width: 100%;
         object-fit: cover;
         transition: all .2s ease;
       }
 
-      .icons{
+      .icons {
         position: absolute;
-        bottom: 1rem; right: -8rem;
+        bottom: 1rem;
+        right: -8rem;
         text-align: center;
         transition: all .2s ease;
 
-        a{
+        a {
           height: 4rem;
           width: 4rem;
           margin-bottom: 1rem;
@@ -441,7 +448,7 @@ section {
           display: block;
           transition: all 0.2s ease;
 
-          &:hover{
+          &:hover {
             background: $pink;
             color: $white;
           }
@@ -449,107 +456,113 @@ section {
       }
     }
 
-    .content{
+    .content {
       padding: 2rem;
 
-      .stars{
+      .stars {
         padding-bottom: 0.5rem;
       }
-      i{
+
+      i {
         font-size: 1.5rem;
         color: $light-color;
       }
     }
 
-    p{
+    p {
       font-size: 2rem;
       color: $black;
       line-height: 2;
     }
-    
-    .price{
+
+    .price {
       font-size: 2rem;
       color: $pink;
 
-      span{
+      span {
         font-size: 1.5rem;
         color: $light-color;
         text-decoration: line-through;
       }
     }
-  } 
+  }
 }
 
 
 .team {
   background: linear-gradient($light-bg, $white);
 
-  .box-container{
+  .box-container {
     @include grid(35rem);
 
-    .box{
+    .box {
       position: relative;
     }
-    .image{
+
+    .image {
       height: 40rem;
       width: 100%;
       position: relative;
       overflow: hidden;
 
-        &:hover .share{
-          right: 0;
-        }
+      &:hover .share {
+        right: 0;
+      }
 
-        &:hover img{
-          transform: scale(1.05);
-        }
+      &:hover img {
+        transform: scale(1.05);
+      }
 
-        img{
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          transition: all .2s ease;
-        }
-        .share{
-          position: absolute;
-          background: $black;
-          height: 100%;
-          display: flex;
-          flex-flow: column;
-          justify-content: center;
-          overflow: hidden;
-          top: 0; right: -5rem;
-          transition: all .2s ease;
-        
-          a{
-            height: 5rem;
-            width: 5rem;
-            margin-bottom: 1rem;
-            display: block;
-            text-align: center;
-            line-height: 5rem;
-            font-size: 3rem;
-            color: $white;
-            cursor: pointer;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all .2s ease;
+      }
 
-            &:hover{
-              color: $pink;
-            }
+      .share {
+        position: absolute;
+        background: $black;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        overflow: hidden;
+        top: 0;
+        right: -5rem;
+        transition: all .2s ease;
+
+        a {
+          height: 5rem;
+          width: 5rem;
+          margin-bottom: 1rem;
+          display: block;
+          text-align: center;
+          line-height: 5rem;
+          font-size: 3rem;
+          color: $white;
+          cursor: pointer;
+
+          &:hover {
+            color: $pink;
           }
         }
+      }
     }
-    .content{
+
+    .content {
       text-align: center;
       padding: 1rem;
       bottom: 0;
       width: 100%;
 
-      h3{
+      h3 {
         font-size: 2rem;
         font-weight: 300;
         color: $black;
       }
-      p{
+
+      p {
         font-size: 1.5rem;
         font-weight: 200;
         color: $pink;
@@ -560,46 +573,47 @@ section {
 
 
 .arrivals {
-   
+
   .slide {
     background: $white;
     text-align: center;
     margin-bottom: 3rem;
-    
 
-    &:hover img{
+
+    &:hover img {
       transform: scale(1.05);
     }
 
-    .image{
+    .image {
       height: 40rem;
       width: 100%;
-      overflow: hidden;      
+      overflow: hidden;
 
-      img{
+      img {
         height: 100%;
         width: 100%;
         object-fit: cover;
         transition: all .2s ease;
-        
+
       }
     }
-    .content{
+
+    .content {
       padding: 2rem;
 
-      p{
-        font-size:2rem;
+      p {
+        font-size: 2rem;
         color: $black;
         line-height: 2rem;
         padding-bottom: .5rem;
       }
 
-      .price{
+      .price {
         font-size: 2rem;
         color: $pink;
-        
 
-        span{
+
+        span {
           color: $light-color;
           font-size: 1.5rem;
           text-decoration: line-through;
@@ -618,7 +632,7 @@ section {
       display: flex;
       align-items: center;
       gap: 1rem;
-      
+
       img {
         height: 7rem;
         width: 7rem;
@@ -630,13 +644,13 @@ section {
         color: $black;
       }
 
-      .stars i{
+      .stars i {
         font-size: 1.5rem;
         color: $pink;
       }
     }
 
-    .text{
+    .text {
       padding: 2rem;
       background: $light-bg;
       border-radius: .5rem;
@@ -646,15 +660,16 @@ section {
       margin-top: 2rem;
       margin-bottom: 3rem;
 
-      &::before{
+      &::before {
         content: "";
         position: absolute;
-        top: -1rem; left: 3rem;
+        top: -1rem;
+        left: 3rem;
         height: 2rem;
         width: 2rem;
         background: $light-bg;
         transform: rotate(45deg);
-        
+
       }
     }
   }
@@ -664,32 +679,35 @@ section {
   background: $light-bg;
   @include grid(30rem);
 
-  .box{
+  .box {
     border: $border;
     padding: 2rem;
     text-align: center;
     background: $white;
 
-    &:hover{
+    &:hover {
       background: $black;
-      img{
+
+      img {
         filter: invert(1);
       }
-      h3{
+
+      h3 {
         color: $white;
       }
-      p{
+
+      p {
         color: $white;
       }
     }
   }
 
-  img{
+  img {
     height: 8rem;
     margin-bottom: .5rem;
   }
 
-  h3{
+  h3 {
     padding: .7rem 0;
     font-size: $light-color;
     line-height: 2;
@@ -697,65 +715,70 @@ section {
 }
 
 
-.blogs{
+.blogs {
 
-  .slide{
+  .slide {
 
     margin-bottom: 3rem;
-    .image{
+
+    .image {
       height: 33rem;
       width: 100%;
       overflow: hidden;
       position: relative;
       border: 1px solid $light-color;
-      border-radius: 1rem; 
+      border-radius: 1rem;
 
       &:hover img {
         transform: scale(1.05);
         transition: all 4s ease;
       }
 
-      img{
+      img {
         position: absolute;
         height: 100%;
         width: 100%;
         object-fit: cover;
       }
-    
-      .icons{
+
+      .icons {
         background: $white;
         position: absolute;
-        bottom: 0; left: 0; right: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1.5rem;
         z-index: 10;
-        
-        a{
+
+        a {
           font-size: 1.2rem;
           color: $black;
 
-          i{
+          i {
             color: $pink;
             padding-right: .5rem;
           }
-          &:hover{
+
+          &:hover {
             color: $pink;
           }
         }
       }
     }
-    .content{
+
+    .content {
       text-align: center;
       padding-top: 1rem;
 
-      h3{
+      h3 {
         font-size: 2rem;
         color: $black;
       }
 
-      p{
+      p {
         padding: 1rem 0;
         line-height: 2;
         color: $light-color;
@@ -785,14 +808,16 @@ section {
   .header .search-form {
     width: 30rem;
   }
+
   .home .slide {
-    .content{
+    .content {
       padding: 2rem;
 
-      span{
+      span {
         font-size: 2rem;
       }
-      h3{
+
+      h3 {
         font-size: 4rem;
       }
     }
@@ -834,7 +859,8 @@ section {
 
     .content {
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       align-items: center;
@@ -843,11 +869,13 @@ section {
       img {
         display: inline-block;
       }
+
       .controls {
         position: static;
         margin-top: 10rem;
       }
     }
+
     .image {
       width: 100%;
     }
@@ -857,20 +885,20 @@ section {
 .gallery {
   background: $light-bg;
 
-  .lightbox{
+  .lightbox {
     @include grid(38rem);
-    
+
     a {
-      height:30rem;
+      height: 30rem;
       overflow: hidden;
       border: 1rem solid $white;
       box-shadow: $box-shadow;
-      
+
       &:hover img {
         transform: scale(1.05);
       }
 
-      img{
+      img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -879,4 +907,3 @@ section {
     }
   }
 }
-
